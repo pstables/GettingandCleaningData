@@ -21,7 +21,7 @@ data.test.subject <- read.csv('./UCI HAR Dataset/test/subject_test.txt', header 
 data.test <-  data.frame(data.test.subject, data.test.activity, data.test.x)
 names(data.test) <- c(c('subject', 'activity'), features)
 
-data <- rbind(data.test, data.train)
+data <- rbind(data.test, data.train )
 
 cols.mean.sd <- grep("mean|std",names(data))
 
@@ -45,5 +45,5 @@ names(data.mean.sd) <- new_name
 
 tidy <- aggregate(data.mean.sd[,3:81], by = list(activity = data.mean.sd$activity, subject = data.mean.sd$subject),FUN = mean)
 write.table(x = tidy, file = "tidy data.txt", row.names = FALSE)
-        
+
 
