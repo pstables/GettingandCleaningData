@@ -20,6 +20,7 @@ test/y_test.txt*** contains the actvity number for the test data
 1. Checks if the data file exists and if not downloads the file to the directory.
 2. Unzips the file
 3. Reads the various files into data frames:
+        
         data.train.x = training data
         data.train.activity = training activity
         data.train.subject = training subject
